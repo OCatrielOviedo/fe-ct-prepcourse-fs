@@ -2,6 +2,13 @@
 /*5️⃣ EJERCICIO 05 5️⃣*/
 
 function esPositivo(num) {
+   if(num > 0){
+      return 'Es positivo';
+   }else if( num < 0){
+      return 'Es negativo';
+   }else if(num === 0){
+      return false;
+   }
    // La función recibe un entero. Devuelve como resultado un string que indica si el número
    // es positivo o negativo.
    // Si el número es positivo ---> "Es positivo".
@@ -11,43 +18,61 @@ function esPositivo(num) {
 }
 
 function agregarSimboloExclamacion(str) {
+   
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+   return str + '!' ;
 }
 
 function combinarNombres(nombre, apellido) {
+   
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
+   var combinar = nombre+ ' ' + apellido;
+   return combinar ;
+   
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+  
+   var saludo = 'Hola ' + nombre+'!';
+   return saludo;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+   var area_rectangulo = ancho*alto;
+   return area_rectangulo
 }
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
+   var perimetro = lado * 4;
+   return perimetro;   
 }
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+   var area_de_triangulo = base*altura/2;
+   return area_de_triangulo;
+
 }
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
+   var dolar = 1.20;
+   return euro * dolar;
 }
 
 function esVocal(letra) {
@@ -55,6 +80,15 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
+
+   var mas_de_un_caracter = /[a-z],[0-9],[1]/;
+   if(letra == 'a','e','i','o','u'){
+      return 'Es vocal';
+   }else if(1 < letra){
+      return 'Dato incorrecto';
+   }else{
+      return 'Dato incorrecto';
+   }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
